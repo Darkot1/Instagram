@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans",
+}
+
+.grid{
+    margin: 0;
+    min-width: 800px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 
+    150px 20px 1fr 40px;
+    grid-template-areas: 
+    "perfil"
+    "perfil"
+    "contenido"
+    "nav_bar";
+    overflow: auto;
+}
+
+.perfil{
+    /* background-color: blueviolet; */
+    grid-area: perfil;
+    
+}
+
+.contenido{
+    /* background-color: chocolate; */
+    grid-area: contenido;
+    
+    
+}
+
+.nav_bar{
+    /* background-color: aqua; */
+    grid-area: nav_bar;
+    border-right: solid 1px #000;
+    
+}
+
+
+
+
+@media screen and (min-width:801px) {
+   .grid{
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 40px 120px 90px 1fr;
+    grid-template-areas: 
+    "nav_bar perfil "
+    "nav_bar perfil"
+    "nav_bar perfil"
+    "nav_bar contenido"
+    "nav_bar contenido";
+    gap: 10px;
+   }
+}
+
+.nav_bar{
+  position: sticky;
+}
+
+.logo{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+}
+.content{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.nav_icons{
+    padding:25px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.flex_icons{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    padding: 15px 12px;
+    align-items: center;
+}
+.clicker{
+    width: 100%;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.13s;
+}
+
+.clicker:hover{
+    background-color: #444;
+    text-decoration: none;
+    transition: 0.13s;
+    transform: scale(1.05);
+}
+
+
+.perfil_description{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.perfil_foto{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil_foto div{
+    width: 50%;
+    height: 60%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.perfil_name{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.name{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.seguidores{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.description p{
+    margin: 0;
+}
+
+.section{
+    width: 60%;
+    height: 100%;
+    border-top: 2px solid #000;
+    margin: auto;
+}
+
+
+.nav_content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav_content a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav_content a:active, a:hover{
+    border-top: 2px solid #fff;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:repeat(10, 400px)  ;
+    gap: 2px;
+}
+
+.item_galeria{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.img1{background-image: url(/images/img1.jpg);}
+.img2{background-image: url(/images/img1.jpg);}
+.img3{background-image: url(/images/img1.jpg);}
+.img4{background-image: url(/images/img1.jpg);}
+.img5{background-image: url(/images/img1.jpg);}
+.img6{background-image: url(/images/img1.jpg);}
+.img7{background-image: url(/images/img1.jpg);}
+.img8{background-image: url(/images/img1.jpg);}
+.img9{background-image: url(/images/img1.jpg);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+    .nav_icons{
+        flex-direction: row;
+    }
+    .logo{
+        display: none;
+    }
+
+    .perfil_description{
+        margin: 0;
+        justify-content: start;
+    }
+
+    .perfil_foto{
+        width: 20%;
+        height: 100%;
+    }
+
+    .perfil_name{
+        width: 75%;
+        height: 100%;
+    }
+    .contenido{
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .section{
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav_content{
+        justify-content: start;
+        width: 100%;
+    }
+}
